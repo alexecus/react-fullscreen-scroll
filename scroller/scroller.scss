@@ -1,0 +1,52 @@
+.ReactScroller {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    perspective: 1200px;
+}
+
+.ReactScroller > div.Wrapper > div.inner,
+.ReactScroller > div.Wrapper > div.inner > * {
+    width: inherit;
+    height: inherit;
+}
+
+.ReactScroller > div.Wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+}
+
+// move-top-bottom //
+
+.ReactScroller .move-top-bottom-forward-enter {
+    transform: translateY(100%);
+}
+
+.ReactScroller .move-top-bottom-reverse-enter {
+    transform: translateY(-100%);
+}
+
+.ReactScroller .move-top-bottom-forward-enter-active,
+.ReactScroller .move-top-bottom-reverse-enter-active {
+    transition: transform 700ms ease-in-out;
+    transform: translateY(0);
+}
+
+.ReactScroller .move-top-bottom-forward-exit,
+.ReactScroller .move-top-bottom-reverse-exit {
+    transform: translateY(0);
+}
+
+.ReactScroller .move-top-bottom-forward-exit-active {
+    transition: transform 700ms ease-in-out;
+    transform: translateY(-100%);
+}
+
+.ReactScroller .move-top-bottom-reverse-exit-active {
+    transition: transform 700ms ease-in-out;
+    transform: translateY(100%);
+}
